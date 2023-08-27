@@ -45,7 +45,7 @@ resource "system_file" "ntp_servers" {
 
 resource "system_file" "additional_configuration" {
     path = "/etc/chrony/conf.d/additional.conf"
-    content = join("\n", var.ntp_additional_configuration)
+    content = format("%s\n",join("\n", var.ntp_additional_configuration))
 
     depends_on = [
         system_packages_apt.chrony,
