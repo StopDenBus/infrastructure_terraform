@@ -2,7 +2,7 @@ terraform {
   required_providers {
     linux = {
       source = "TelkomIndonesia/linux"
-      version = "0.7.0"
+      version = "0.7.1"
     }
     system = {
       source = "neuspaces/system"
